@@ -94,6 +94,8 @@ extern USBD_CDC_ItfTypeDef USBD_Interface_fops_FS;
 
 /* USER CODE BEGIN EXPORTED_VARIABLES */
 
+typedef void (*CDC_receive_cb)(uint8_t* Buf, uint32_t *Len);
+
 /* USER CODE END EXPORTED_VARIABLES */
 
 /**
@@ -108,6 +110,9 @@ extern USBD_CDC_ItfTypeDef USBD_Interface_fops_FS;
 uint8_t CDC_Transmit_FS(uint8_t* Buf, uint16_t Len);
 
 /* USER CODE BEGIN EXPORTED_FUNCTIONS */
+
+void CDC_set_receive_cb(CDC_receive_cb cd);
+
 
 /* USER CODE END EXPORTED_FUNCTIONS */
 
