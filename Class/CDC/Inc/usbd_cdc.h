@@ -137,6 +137,10 @@ USBD_CDC_HandleTypeDef;
   * @{
   */
 
+extern serial_callback_t usb_idle_cb;    // packet_received_485
+extern serial_callback_t usb_tx_cb;      // packet_transmitter_485
+extern serial_callback_t usb_timeout_cb; // timeout_rx_485
+
 extern USBD_ClassTypeDef  USBD_CDC;
 #define USBD_CDC_CLASS    &USBD_CDC
 /**
